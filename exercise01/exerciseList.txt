@@ -1,0 +1,53 @@
+EXERCISES
+Program, simulate, and test each of the following experiments using Quartus
+II and the DE2 development board.
+1. Using only instantiation, build a Majority module considering:
+a) The module must have 4 input ports A, B, C, X, and one output Y.
+b) When the majority of signals A, B, and C are true, Y must have the same value as
+X, or zero otherwise.
+c) Construct the truth table, sketch the logic circuit, name the internal signals, and
+create the Majority module in SystemVerilog using only instantiation of primitive gates.
+d) Instantiate Majority at the top, connecting to the switches and LEDs as necessary.
+e) Compile, record, and test the circuit.
+2. Build a hexadecimal decoder for 7 segments with an enable signal.
+a) The module should be called d7s, have a 4-bit input X, a 1-bit input EN,
+ and a 7-bit output Y.
+b) When EN is active, the input number must be shown on the display. When
+inactive, the display must turn off.
+c) To test, connect via top the SW[3:0] switches as X, the SW[17] switch as EN,
+and the HEX[0] display as Y.
+3. Build a 16:4 encoder with gate.
+a) The module must be called cod16_4, have a 16-bit input X, a 4-bit output
+Y, and a 1-bit GATE output.
+b) When one or more bits are active in X, the output Y must provide the most significant active bit number,
+and GATE must be true.
+c) When no bits are active in X, the value of Y does not matter, but GATE must be
+false.
+d) To test, connect SW[15:0] to X of the encoder, LEDR[3:0] to Y, and use the
+display decoder from the previous exercise to show Y in hexadecimal.
+4. Build a 4:16 demux.
+a) The module should be called demux4_16, have a one-bit input X, a four-bit selector input
+S, and a 16-bit output Y.
+b) The value of input X should appear at the selected output Y, and the other outputs
+should remain at zero.
+c) Connect to the board and test.
+5. Build a self-starting counter that implements the sequence 1-2-7-3-6-1.
+a) The module should be called cnt_127361, have a CLK input with one bit, and an output
+Y with 3 bits.
+b) If it starts out of sequence, the counter should return to position 1.
+c) To test, use KEY[0] as the clock, and the decoder from the first exercise to
+display the number in hexadecimal.
+6. Build a frequency divider from 50MHz to 1Hz using a counter.
+a) The module should be called div50M, and have a CLK_IN input and a
+CLK_OUT output, both with one bit.
+b) The CLK_OUT output should remain active for only 1 out of every 50M CLK_IN cycles.
+c) To test, use the board's 50MHz signal as the clock source, and toggle the state
+of LEDR[0] whenever CLK_OUT is true.
+7. Make an 8-bit counter that:
+a) Shows the output in hexadecimal on two 7-segment displays, and in binary on
+LEDR[7:0].
+b) Increments by one when the user presses KEY[0] and releases it in less than
+one second.
+c) Returns to zero when the user holds KEY[0] for more than one second.
+
+Translated with DeepL.com (free version)

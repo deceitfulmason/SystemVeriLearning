@@ -10,7 +10,7 @@
 
 !*.sv
 !**/*.sv
-
+!**/*.txt
 
 !README.md
 !README.*
