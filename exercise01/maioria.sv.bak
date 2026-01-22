@@ -1,0 +1,11 @@
+module maioria (
+    input  wire A, B, C, X,
+    output wire Y
+);
+    wire AB, AC, BC, M;
+    and and1 (AB, A, B);
+    and and2 (AC, A, C);
+    and and3 (BC, B, C);
+    or  or1  (M, AB, AC, BC);
+    and and4 (Y, M, X);
+endmodule
