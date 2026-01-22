@@ -43,6 +43,7 @@
 
     /*
 
+
     //THIRD QUESTION
 
     logic [3:0] enc_Y;
@@ -53,7 +54,7 @@
     cod16_4 encoder(
             .X(SW[15:0]),
             .Y(enc_Y),
-            .GATE(LEDR[0])
+            .GATE(LEDR[8])
 
     );
 
@@ -69,10 +70,10 @@
     // assign HEX[0] = ~seg_hex; // if HEX doesn't work
 
 
+*/
 
 
-
-    */
+   
 
 
 
