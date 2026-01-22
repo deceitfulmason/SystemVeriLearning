@@ -1,12 +1,12 @@
 module cod16_4 (
-    logic input [15:0]  X,
-    logic output        Y,
-    logic output        GATE
+    input logic [15:0]  X,
+    output logic [3:0]       Y,
+    output logic       GATE
 );
 
     always_comb begin
 
-       Y = 4'b0000 //Initializes Y as a 4 bit value of 0 to avoid errors 
+       Y = 4'd0; //Initializes Y as a 4 bit value of 0 to avoid errors 
 
         	/*
 
@@ -21,24 +21,18 @@ module cod16_4 (
 
         GATE = |X;
 
-        casex(x)
-            16'b1xxxxxxxxxxxxxxx:   Y = 4'b1111;  
-		    16'b01xxxxxxxxxxxxxx:   Y = 4'b1110;
-		    16'b001zzzzzzzzzzzzz:   Y = 4'b1101;
-		    16'b0001zzzzzzzzzzzz:   Y = 4'b1100;
-		    16'b00001zzzzzzzzzzz:   Y = 4'b1011;
-		    16'b000001zzzzzzzzzz:   Y = 4'b1010;
-		    16'b0000001zzzzzzzzz:   Y = 4'b1001;
-		    16'b00000001zzzzzzzz:   Y = 4'b1000;
-		    16'b000000001zzzzzzz:   Y = 4'b0111;
-		    16'b0000000001zzzzzz:   Y = 4'b0110;
-		    16'b00000000001zzzzz:   Y = 4'b0101;
-		    16'b000000000001zzzz:   Y = 4'b0100;
-		    16'b0000000000001zzz:   Y = 4'b0011;
-		    16'b00000000000001zz:   Y = 4'b0010;
-		    16'b0000000000000001:   Y = 4'b0001;
-		    16'b0000000000000000:   Y = 4'b0000;
-        endcase    
+        if(GATE) begin
+
+                for(int i = 15; i >= 0; i--) begin 
+                    if (X[i]) begin
+                            Y = i;
+
+                            break;
+
+                        end
+                    end
+
+        end 
 
     end
 
