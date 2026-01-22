@@ -1,6 +1,6 @@
 module maioria (
-    logic output Y
-    logic input A, B, C, X
+  input  logic A, B, C, X,
+  output logic Y
 );
 
 logic ACX, ABX, BCX;

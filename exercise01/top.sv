@@ -9,8 +9,13 @@ module top (
  
 
  maioria maioria0 (
-    .A, .B, .C, .X(SW[3:0]),
-    .Y(LEDG[0])
+    .A(SW[0]),
+    .B(SW[1]),
+    .C(SW[2]),
+    .X(SW[3]),
+    .Y(LEDG[8])
+
+
  );
 
 endmodule
