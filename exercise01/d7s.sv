@@ -2,10 +2,13 @@ module d7s(
     input logic [3:0] X ,
     input logic EN ,
     output logic [6:0] Y 
+);
 
-Y = 7'b0000000; //Sets starting value of Y as ALL SEGMENTS OFF
 
-always_comb begin : 
+always_comb begin 
+
+        Y = 7'b0000000; //Sets starting value of Y as ALL SEGMENTS OFF
+
                 if (EN)
         begin 
                 //When ENable is active, 7 segment display should mirror the input.
@@ -48,11 +51,6 @@ always_comb begin :
 
         end
 
-        else begin
-
-
-
-        end
-
 end
 
+endmodule

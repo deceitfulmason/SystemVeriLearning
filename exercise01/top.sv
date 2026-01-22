@@ -10,6 +10,9 @@ module top (
 
  
 /*
+
+//FIRST QUESTION
+
  maioria maioria0 (
     .A(SW[0]),
     .B(SW[1]),
@@ -22,5 +25,11 @@ module top (
 */
 
 
+/*
+//SECOND QUESTION
+
+
+
+*/
 
 endmodule
