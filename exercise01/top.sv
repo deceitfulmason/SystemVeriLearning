@@ -8,6 +8,9 @@ module top (
 );
  
 
+
+ 
+/*
  maioria maioria0 (
     .A(SW[0]),
     .B(SW[1]),
@@ -17,5 +20,8 @@ module top (
 
 
  );
+*/
+
+
 
 endmodule
