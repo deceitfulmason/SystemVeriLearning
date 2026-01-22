@@ -1,16 +1,25 @@
 module d7s(
-    input logic X [3:0],
-    input logic EN [0],
-    output logic Y [6:0]
-
-        if (EN)
-begin 
+    input logic [3:0] X ,
+    input logic [0] EN ,
+    output logic [6:0] Y 
 
 
-end
 
-else begin
+always_comb begin : 
+    
+        
+    
+
+                if (EN)
+        begin 
 
 
+        end
+
+        else begin
+
+
+
+        end
 
 end
