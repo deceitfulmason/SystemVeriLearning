@@ -25,11 +25,32 @@ module top (
 */
 
 
+
 /*
+
 //SECOND QUESTION
+
+    d7s display0 (
+        .X(SW[3:0]),
+        .EN(SW[17]),
+        .Y(HEX[0])
+    
+    
+    );
+
+
+*/
+
+/*
+
+//THIRD QUESTION
+
 
 
 
 */
+
+
+
 
 endmodule
