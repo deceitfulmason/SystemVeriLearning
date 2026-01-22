@@ -1,23 +1,21 @@
-# ========== Strategy: ignore everything, then un-ignore .sv ==========
-# Ignore everything by default
+
 *
 
-# But do not ignore this .gitignore file
+
 !.gitignore
 
-# Allow entering directories (so the unignore below can work)
+
 !*/
 
-# Un-ignore SystemVerilog files anywhere in the tree
+
 !*.sv
 !**/*.sv
 
-# (Optional) If you keep a README or docs, un-ignore them:
+
 !README.md
 !README.*
 
-# ========== Additional explicit Quartus patterns (redundant but safe) ==========
-# Quartus build outputs / incremental DBs / reports
+
 db/
 incremental_db/
 output_files/
