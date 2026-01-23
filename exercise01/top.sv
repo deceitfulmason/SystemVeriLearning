@@ -86,6 +86,20 @@ demux4_16 demux0(
    
 
 
+/*
+	
+//FIFTH QUESTION
+
+
+cnt_127361 counter(
+    .CLK(SW[0]),
+    .Y(LEDR[2:0])
+
+);
+
+
+*/
+
 
 
     endmodule
