@@ -72,7 +72,17 @@
 
 */
 
+/*
 
+    //FOURTH QUESTION
+
+demux4_16 demux0(
+    .X(SW[17]),
+    .S(SW[3:0]),
+    .Y(LEDR[15:0])
+);
+
+*/
    
 
 
