@@ -8,6 +8,18 @@ always_ff @(posedge CLK_IN) begin
 
 
 
+for (i = 0; i <= 50.000.000 - 1; i++) begin:
+
+int i <= CLK_IN;
+
+end
+
+
+
+
+
+
+// 50mhz => 50.000.000 in one second AND 1 activation of CLK_OUT
 
 end
 
