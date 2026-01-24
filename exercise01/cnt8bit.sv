@@ -1,9 +1,15 @@
 module cntbit(
 input logic X,
+input logic CLK_IN,
+output logic [1:0] C_VALUE
+
 
 );
 
+int [7:0] COUNTER;
 
+
+always_ff @(posedge CLK_IN)
 
 
 

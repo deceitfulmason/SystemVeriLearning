@@ -91,11 +91,26 @@ demux4_16 demux0(
 //FIFTH QUESTION
 
 
-cnt_127361 counter(
-    .CLK(SW[0]),
-    .Y(LEDR[2:0])
+    logic [2:0] cnt_val;
+    logic [6:0] seg_hex;
 
-);
+    cnt_127361 counter (
+        .CLK (KEY[0]),
+        .Y   (cnt_val)
+    );
+
+
+    assign LEDR[2:0] = cnt_val;
+
+
+    d7s display2 (
+        .X  ({1'b0, cnt_val}), // ajusta para 4 bits
+        .EN (1'b1),
+        .Y  (seg_hex)
+    );
+
+    assign HEX[0] = seg_hex;
+    // assign HEX[0] = ~seg_hex; //logical low level
 
 
 */

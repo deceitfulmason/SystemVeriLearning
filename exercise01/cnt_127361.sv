@@ -35,3 +35,12 @@ always_ff @(posedge CLK) begin
         end
 
 endmodule
+
+/*
+5. Build a self-starting counter that implements the sequence 1-2-7-3-6-1.
+a) The module should be called cnt_127361, have a CLK input with one bit, and an output
+Y with 3 bits.
+b) If it starts out of sequence, the counter should return to position 1.
+c) To test, use KEY[0] as the clock, and the decoder from the first exercise to
+display the number in hexadecimal.
+*/
