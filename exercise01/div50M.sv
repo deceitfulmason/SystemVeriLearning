@@ -1,18 +1,26 @@
-module div50m(
+module div50M(
     input logic CLK_IN,
     output logic CLK_OUT
 );
 
 
+logic [25:0] counter; //this variable is used so we increment the value of the register
+//the value 50.000.000 can fit into 25 bits.
+
+
 always_ff @(posedge CLK_IN) begin
 
 
-
-for (i = 0; i <= 50.000.000 - 1; i++) begin:
-
-int i <= CLK_IN;
-
-end
+        if(counter >= 50000000-1) 
+    begin
+CLK_OUT <= 1'b1;
+counter <= 0;
+    end
+        else
+    begin
+counter <= counter +1;
+CLK_OUT <= 1'b0;
+    end
 
 
 
@@ -23,12 +31,4 @@ end
 
 end
 
-/*
-6. Build a frequency divider from 50MHz to 1Hz using a counter.
-a) The module should be called div50M, and have a CLK_IN input and a
-CLK_OUT output, both with one bit.
-b) The CLK_OUT output should remain active for only 1 out of every 50M CLK_IN cycles.
-c) To test, use the board's 50MHz signal as the clock source, and toggle the state
-of LEDR[0] whenever CLK_OUT is true.
-*/
 endmodule

@@ -102,4 +102,18 @@ cnt_127361 counter(
 
 
 
+/*
+//SIXTH QUESTION
+
+
+
+div50M div(
+    .CLK_IN(CLK50),
+    .CLK_OUT(LEDR[0])
+
+
+);
+*/
+
+
     endmodule
