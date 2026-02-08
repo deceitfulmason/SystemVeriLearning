@@ -39,3 +39,5 @@ output_files/
 *.qrc
 *.sdc
 *.bak
+/exercise01
+exercise01/top.sv
