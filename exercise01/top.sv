@@ -8,25 +8,6 @@
     );
     
 
-    /*
-	 questao01 Contemp0(
-		.X(SW[15:0]),
-		.A(LEDG[0]),
-		.V(LEDG[1]),
-		.D(LEDG[2]),
-		.S(LEDG[3])
-	*/
-	 
-	  /*
-	 questao02 barra0(
-	 .X(SW[7:0]),
-	 .Y(LEDR[15:0])
-	 
-	 
-	 );
-	    */
-		 
-		 
 	 
 	 
     /*
